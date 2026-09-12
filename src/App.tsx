@@ -1,14 +1,15 @@
-import HeroSection from "./Components/HeroSection";
+import MainBar from "./Components/Main/MainBar";
 import NavBar from "./Components/NavBar";
 
+
 function App() {
+  
   return (
-    <div className="container mx-auto px-5 max-w-350">
+    < >
       <NavBar/>
-      <HeroSection/>
-      <HeroSection/>
-      <HeroSection/>
-    </div>
+      <MainBar/>
+ 
+    </>
 
 
   )

@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 function NavBar() {
     const [show, setShow] = useState(false)
   return (
-    <section className="fixed top-0 left-0 z-50 w-full bg-white ">
+    <header className="container mx-auto px-5 max-w-350 fixed top-0 left-0 z-50 w-full bg-white" >
       <div className="mt-3 mx-auto w-full max-w-[1340px]  flex justify-between items-center relative ">
         {/* logo */}
         <div className=" flex gap-2 items-center">
@@ -21,10 +21,10 @@ function NavBar() {
         </div>
 
         {/* mentubar */}
-        <div className={`absolute md:static transform transition-transform duration-300 ${show? "translate-x-0" : "translate-x-full"}   top-0 right-0 md:translate-0 z-100  bg-green-300 md:bg-white pt-2 pb-30 md:pb-0`}>
+        <nav className={`absolute md:static transform transition-transform duration-300 ${show? "translate-x-5" : "translate-x-60"}   top-0 right-0 md:translate-0 z-100  bg-white md:bg-white pt-2 pb-30 md:pb-0`}>
             <div 
             onClick={() => setShow(false)}
-            className="absolute right-2 text-3xl md:hidden"
+            className="absolute cursor-pointer right-2 text-3xl md:hidden"
             ><MdClose/> </div>
 
           <ul className="ml-4 pr-20 md:pr-0 md:ml-0 flex flex-col md:flex-row gap-8 md:bg-none md:gap-5 font-semibold text-gray-600  text-md ">
@@ -34,10 +34,10 @@ function NavBar() {
             <li className="hover:text-pink-500 cursor-pointer">About</li>
             <li className="hover:text-pink-500 cursor-pointer">Contact</li>
           </ul>
-        </div>
+        </nav>
 
         {/* log in */}
-        <div className={`absolute md:static ${show? "translate-x-0" : "translate-x-30"} transform transition-transform duration-300 md:translate-x-0 top-85 right-15 z-110 item-center gap-3 flex md:flex`}>
+        <div className={`absolute md:static ${show? "translate-x-5" : "translate-x-60"} transform transition-transform duration-300 md:translate-x-0 top-85 right-15 z-110 item-center gap-3 flex md:flex`}>
           <button className=" hover:text-pink-500 font-semibold cursor-pointer">
             Sing In
           </button>
@@ -48,11 +48,11 @@ function NavBar() {
 
         <div 
         onClick={() => setShow(true)}
-        className="w-15 text-3xl md:text-4xl md:hidden">
+        className="w-5 text-3xl md:text-4xl cursor-pointer md:hidden">
           <LuMenu />
         </div>
       </div>
-    </section>
+    </header>
   );
 }
 
