@@ -1,11 +1,15 @@
 import type { DataType } from "../../DataType";
 import { FaStar } from "react-icons/fa6";
 
+type SingleType = DataType & {
+    isAdd:boolean
+}
 interface SingleCardType {
-  data: DataType;
+  data: SingleType;
+  handleAdded : (value: string) => void
 }
 
-function SingleTechCard({ data }: SingleCardType) {
+function SingleTechCard({ data, handleAdded }: SingleCardType) {
   const technologyColors: { [key: string]: string } = {
     react: "bg-cyan-100 text-cyan-700",
     vue: "bg-green-100 text-green-700",
@@ -47,7 +51,9 @@ function SingleTechCard({ data }: SingleCardType) {
             {data.rating}
           </span>
         </div>
-        <button className="bg-black text-white w-full rounded-lg mt-5 p-1 font-semibold hover:bg-gray-500">
+        <button 
+        onClick={() => handleAdded(data.id)}
+        className={`bg-black text-white w-full rounded-lg mt-5 p-1 font-semibold hover:bg-gray-500 ${data.isAdd? "bg-gray-500": ""}`}>
           Add to Cart
         </button>
       </div>

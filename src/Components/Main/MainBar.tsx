@@ -5,7 +5,7 @@ function MainBar() {
 
     
   return (
-    <main>
+    <main className='container mx-auto max-w-[1240px]'>
       <HeroSection/>
       <CardBox/>
     
