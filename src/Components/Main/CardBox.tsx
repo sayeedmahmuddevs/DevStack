@@ -2,7 +2,6 @@ import { Suspense, useState } from "react";
 import type { DataType } from "../../DataType";
 import TechnologiesList from "./TechnologiesList";
 
-
 function CardBox() {
   const dataStack = async (): Promise<DataType[]> => {
     const res = await fetch("./Data.json");

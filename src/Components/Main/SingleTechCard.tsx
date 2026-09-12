@@ -7,9 +7,10 @@ type SingleType = DataType & {
 interface SingleCardType {
   data: SingleType;
   handleAdded : (value: string) => void
+  handleStock : (card:SingleType) => void
 }
 
-function SingleTechCard({ data, handleAdded }: SingleCardType) {
+function SingleTechCard({ data, handleAdded, handleStock }: SingleCardType) {
   const technologyColors: { [key: string]: string } = {
     react: "bg-cyan-100 text-cyan-700",
     vue: "bg-green-100 text-green-700",
@@ -24,6 +25,10 @@ function SingleTechCard({ data, handleAdded }: SingleCardType) {
     docker: "bg-sky-100 text-sky-700",
     git: "bg-orange-100 text-orange-700",
   };
+    const handleControl = () => {
+        handleAdded(data.id)
+        handleStock(data)
+    }
 
   return (
     <div className="p-5 outline outline-gray-200 rounded-2xl flex flex-col justify-between">
@@ -52,9 +57,9 @@ function SingleTechCard({ data, handleAdded }: SingleCardType) {
           </span>
         </div>
         <button 
-        onClick={() => handleAdded(data.id)}
-        className={`bg-black text-white w-full rounded-lg mt-5 p-1 font-semibold hover:bg-gray-500 ${data.isAdd? "bg-gray-500": ""}`}>
-          Add to Cart
+        onClick={handleControl}
+        className={`bg-black text-white cursor-pointer w-full rounded-lg mt-5 p-1 font-semibold hover:bg-gray-500 ${data.isAdd? "bg-gray-500": ""}`}>
+          {data.isAdd? "Added to Stock" : "Add to Stock"}
         </button>
       </div>
     </div>
