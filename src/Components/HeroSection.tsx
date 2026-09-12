@@ -1,14 +1,14 @@
 function HeroSection() {
   return (
     <section className="pb-40 pt-10 ">
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2">
         <div className="mt-30 ml-5">
           <div>
-            <h1 className="text-6xl font-bold">Build Your Idea</h1>
-            <h1 className="text-6xl font-bold text-amber bg-linear-to-r to-purple-700 from-amber-600 bg-clip-text text-transparent ">Development Stack</h1>
+            <h1 className="text-5xl lg:text-6xl font-bold">Build Your Idea</h1>
+            <h1 className="text-5xl lg:text-6xl font-bold text-amber bg-linear-to-r to-violet-600 from-orange-500 bg-clip-text text-transparent ">Development Stack</h1>
           </div>
 
-          <p className="w-150 text-lg mt-5 mb-13 ">
+          <p className="max-w-150 text-lg mt-5 mb-13 ">
             Explore frontend, backend, database, and tooling options, compare
             them side by side, and put together the stack that fits your next
             project.

@@ -6,6 +6,8 @@ function App() {
     <div className="container mx-auto px-5 max-w-350">
       <NavBar/>
       <HeroSection/>
+      <HeroSection/>
+      <HeroSection/>
     </div>
 
 
