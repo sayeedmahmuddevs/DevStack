@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 function NavBar() {
   const [show, setShow] = useState(false);
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-white">
+    <header className="fixed top-0 left-0 z-50 w-full bg-white pb-2">
       <div className="max-w-[1240px] mx-auto px-5">
         <div className="mt-3 mx-auto w-full  flex justify-between items-center relative ">
           {/* logo */}
@@ -33,7 +33,7 @@ function NavBar() {
             </div>
 
             <ul className="ml-4 pr-20 md:pr-0 md:ml-0 flex flex-col md:flex-row gap-8 md:bg-none md:gap-5 font-semibold text-gray-600  text-md ">
-              <li className="hover:text-pink-500 cursor-pointer">Home</li>
+              <li className="hover:text-pink-500 cursor-pointer text-pink-500">Home</li>
               <li className="hover:text-pink-500 cursor-pointer">
                 Technologies
               </li>

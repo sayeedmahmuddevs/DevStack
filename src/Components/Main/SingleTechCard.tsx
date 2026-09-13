@@ -1,16 +1,20 @@
 import type { DataType } from "../../DataType";
 import { FaStar } from "react-icons/fa6";
+import { MdOutlineDone } from "react-icons/md";
+import { toast } from "react-toastify";
 
 type SingleType = DataType & {
-    isAdd:boolean
-}
+  isAdd: boolean;
+};
 interface SingleCardType {
   data: SingleType;
-  handleAdded : (value: string) => void
-  handleStock : (card:SingleType) => void
+  handleAdded: (value: string) => void;
+  handleStock: (card: SingleType) => void;
 }
 
 function SingleTechCard({ data, handleAdded, handleStock }: SingleCardType) {
+  
+  // badge color object
   const technologyColors: { [key: string]: string } = {
     react: "bg-cyan-100 text-cyan-700",
     vue: "bg-green-100 text-green-700",
@@ -25,13 +29,18 @@ function SingleTechCard({ data, handleAdded, handleStock }: SingleCardType) {
     docker: "bg-sky-100 text-sky-700",
     git: "bg-orange-100 text-orange-700",
   };
-    const handleControl = () => {
-        handleAdded(data.id)
-        handleStock(data)
-    }
+  
+  // added to stock 
+  const handleControl = () => {
+    handleAdded(data.id);
+    handleStock(data);
+    toast.success("Added to stock");
+  };
 
   return (
-    <div className="p-5 outline outline-gray-200 rounded-2xl flex flex-col justify-between">
+    <div
+      className={`hover:-translate-y-1 p-3 transition-transform duration-200 outline ${data.isAdd ? "outline-pink-400 shadow-xl" : "outline-gray-200"} rounded-2xl flex flex-col justify-between`}
+    >
       <div className="flex justify-between items-start ">
         <div>
           <img src={data.icon} alt="" className="mb-5 w-15" />
@@ -56,10 +65,20 @@ function SingleTechCard({ data, handleAdded, handleStock }: SingleCardType) {
             {data.rating}
           </span>
         </div>
-        <button 
-        onClick={handleControl}
-        className={`bg-black text-white cursor-pointer w-full rounded-lg mt-5 p-1 font-semibold hover:bg-gray-500 ${data.isAdd? "bg-gray-500": ""}`}>
-          {data.isAdd? "Added to Stock" : "Add to Stock"}
+        {/* Added stock btn */}
+        <button
+          onClick={handleControl}
+          disabled={data.isAdd ? true : false}
+          className={`bg-black text-white cursor-pointer w-full rounded-lg mt-5 p-1 font-semibold ${data.isAdd ? "bg-pink-100" : ""}`}
+        >
+          {data.isAdd ? (
+            <div className="flex justify-center items-center text-pink-500">
+              <MdOutlineDone />
+              Added to Stock
+            </div>
+          ) : (
+            "Add to Stock"
+          )}
         </button>
       </div>
     </div>

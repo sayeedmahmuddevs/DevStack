@@ -12,18 +12,19 @@ interface TechnologiesType {
 
 function TechnologiesList({ data }: TechnologiesType) {
   const dataStack = use(data);
-
+  
+// Add isAdd property to each technology item
   const [NewDataList, setNewDataList] = useState<NewListType[]>(
     dataStack.map((tec) => ({ ...tec, isAdd: false })),
   );
-  //   Added
+  //   Added to stock
   const handleAdded = (value: string) => {
     setNewDataList((pre) =>
       pre.map((tec) => (tec.id === value ? { ...tec, isAdd: true } : tec)),
     );
   };
 
-  //   stockCart
+  //   stockCart stack
   const [stock, setStock] = useState<NewListType[]>([]);
 
   const handleStock = (card: NewListType) => {
@@ -32,7 +33,7 @@ function TechnologiesList({ data }: TechnologiesType) {
     );
   };
 
-  // remove card
+  // remove card update from stock
   const handleRemove = (id: string) => {
     setStock((pre) => pre.filter((pr) => pr.id !== id));
     setNewDataList((pre) =>
@@ -40,7 +41,7 @@ function TechnologiesList({ data }: TechnologiesType) {
     );
   };
 
-  // RemoveAll
+  // RemoveAll from stock
   const handleRemoveAll = () => {
     setNewDataList((pre) => pre.map((tec) => ({ ...tec, isAdd: false })));
     setStock((pre) => pre.filter((pr) => !pr.id));

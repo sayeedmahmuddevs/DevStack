@@ -1,6 +1,63 @@
 function Footer() {
   return (
-    <div></div>
+    <footer className="container mx-auto w-full max-w-[1240px] md:mt-30 mt-15">
+      <div className="grid xl:grid-cols-5 md:grid-cols-2 grid-cols-1 sm:gap-10 ">
+        <div className="col-span-2">
+          <div className="flex justify-center items-center xl:justify-start ">
+            <img src="/src/assets/logo-text.png" alt="" />
+          </div>
+          <p className="mt-3 flex justify-center items-center xl:justify-start">
+            Curated tools, technologies, and resources for developers building
+            modern software.
+          </p>
+
+          <div className="mt-7 flex gap-5  justify-center xl:justify-start">
+            <a className="font-semibold" href="github.com">
+              githube
+            </a>
+            <a className="font-semibold" href="github.com">
+              Twitter
+            </a>
+            <a className="font-semibold" href="github.com">
+              Linked
+            </a>
+          </div>
+        </div>
+        <div className="col-span-3 md:grid grid-cols-3 hidden">
+          <div className="ml-20">
+            <p className="font-semibold text-xl mb-5 uppercase">Product</p>
+            <ul className="flex flex-col gap-3 text-gray-500">
+              <li>home</li>
+              <li>Technologies</li>
+              <li>Projects</li>
+            </ul>
+          </div>
+          <div className="ml-20">
+            <p className="font-semibold text-xl mb-5 uppercase">Company</p>
+            <ul className="flex flex-col gap-3 text-gray-500">
+              <li>About</li>
+              <li>Contact</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+          <div className="ml-20">
+            <p className="font-semibold text-xl mb-5 uppercase">LEGAL</p>
+            <ul className="flex flex-col gap-3 text-gray-500">
+              <li>Privacy Policy</li>
+              <li>Tearms of Service</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr className="mt-10 text-gray-200" />
+      <div className="flex justify-between items-center my-10 text-gray-300">
+        <h5>© 2026 Dev Stack. All rights reserved.</h5>
+        <div className="flex  gap-5">
+          <span>Privacy</span>
+          <span>Terms</span>
+        </div>
+      </div>
+    </footer>
   );
 }
 
