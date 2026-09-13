@@ -27,7 +27,7 @@ function Footer() {
           <div className="ml-20">
             <p className="font-semibold text-xl mb-5 uppercase">Product</p>
             <ul className="flex flex-col gap-3 text-gray-500">
-              <li className="hover:underline cursor-pointer">home</li>
+              <li className="hover:underline cursor-pointer">Home</li>
               <li className="hover:underline cursor-pointer">Technologies</li>
               <li className="hover:underline cursor-pointer">Projects</li>
             </ul>
