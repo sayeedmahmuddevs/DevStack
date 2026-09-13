@@ -1,7 +1,7 @@
 import { MdClose } from "react-icons/md";
 import type { DataType } from "../../DataType";
 import { toast } from "react-toastify";
-import { BiColor } from "react-icons/bi";
+
 
 type SingleType = DataType & {
   isAdd: boolean;
