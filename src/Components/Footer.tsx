@@ -1,10 +1,13 @@
+import logo from "../assets/logo-text.png"
+
+
 function Footer() {
   return (
     <footer className="container mx-auto w-full max-w-[1240px] md:mt-30 mt-15">
       <div className="grid xl:grid-cols-5 md:grid-cols-2 grid-cols-1 sm:gap-10 ">
         <div className="col-span-2">
           <div className="flex justify-center items-center xl:justify-start ">
-            <img src="/src/assets/logo-text.png" alt="" />
+            <img src={logo} alt="" />
           </div>
           <p className="mt-3 flex justify-center items-center xl:justify-start">
             Curated tools, technologies, and resources for developers building
