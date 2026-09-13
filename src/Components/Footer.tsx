@@ -12,13 +12,13 @@ function Footer() {
           </p>
 
           <div className="mt-7 flex gap-5  justify-center xl:justify-start">
-            <a className="font-semibold" href="github.com">
+            <a className="font-semibold" href="https://github.com/sayeedmahmuddevsgithub.com">
               githube
             </a>
-            <a className="font-semibold" href="github.com">
+            <a className="font-semibold" href="x.com">
               Twitter
             </a>
-            <a className="font-semibold" href="github.com">
+            <a className="font-semibold" href="https://www.linkedin.com/in/sayeed-mahmud-devs/">
               Linked
             </a>
           </div>
@@ -27,24 +27,24 @@ function Footer() {
           <div className="ml-20">
             <p className="font-semibold text-xl mb-5 uppercase">Product</p>
             <ul className="flex flex-col gap-3 text-gray-500">
-              <li>home</li>
-              <li>Technologies</li>
-              <li>Projects</li>
+              <li className="hover:underline cursor-pointer">home</li>
+              <li className="hover:underline cursor-pointer">Technologies</li>
+              <li className="hover:underline cursor-pointer">Projects</li>
             </ul>
           </div>
           <div className="ml-20">
             <p className="font-semibold text-xl mb-5 uppercase">Company</p>
             <ul className="flex flex-col gap-3 text-gray-500">
-              <li>About</li>
-              <li>Contact</li>
-              <li>Careers</li>
+              <li className="hover:underline cursor-pointer">About</li>
+              <li className="hover:underline cursor-pointer">Contact</li>
+              <li className="hover:underline cursor-pointer">Careers</li>
             </ul>
           </div>
           <div className="ml-20">
             <p className="font-semibold text-xl mb-5 uppercase">LEGAL</p>
             <ul className="flex flex-col gap-3 text-gray-500">
-              <li>Privacy Policy</li>
-              <li>Tearms of Service</li>
+              <li className="hover:underline cursor-pointer">Privacy Policy</li>
+              <li className="hover:underline cursor-pointer">Tearms of Service</li>
             </ul>
           </div>
         </div>
