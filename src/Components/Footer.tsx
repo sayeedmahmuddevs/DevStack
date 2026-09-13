@@ -15,7 +15,7 @@ function Footer() {
           </p>
 
           <div className="mt-7 flex gap-5  justify-center xl:justify-start">
-            <a className="font-semibold" href="https://github.com/sayeedmahmuddevsgithub.com">
+            <a className="font-semibold" href="https://github.com/sayeedmahmuddevs">
               githube
             </a>
             <a className="font-semibold" href="x.com">
